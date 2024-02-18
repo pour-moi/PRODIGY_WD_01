@@ -1,0 +1,83 @@
+body {
+  background-color: whitesmoke;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+.HeaderImage {
+  max-height: 30em;
+}
+.About {
+  width: 40%;
+}
+.aboutPage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service1,
+.service2,
+.service3,
+.service4 {
+  width: 29em;
+  height: 10em;
+  background-color: white;
+  display: flex;
+  border-radius: 2em;
+  padding: 5px;
+}
+
+.service1 > h2,
+.service4 > h2 {
+  display: inline-block;
+  height: fit-content;
+  background-color: #b5ff63;
+}
+
+.range {
+  display: inline-block;
+  background-color: #b5ff63;
+}
+.speed {
+  display: inline-block;
+  background-color: white;
+}
+.service2,
+.service3 {
+  background-color: #1f1f1f;
+}
+
+.para {
+  color: white;
+}
+
+.Service {
+  background-color: #b5ff63;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.service1 > img,
+.service2 > img,
+.service3 > img,
+.service4 > img {
+  height: 10em;
+}
+
+.service-info {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
