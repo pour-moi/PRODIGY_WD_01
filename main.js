@@ -3,8 +3,8 @@ const sections = document.querySelectorAll(
 );
 
 const options = {
-  root: null, // viewport
-  threshold: 0.1, // 10% of the target is visible
+  root: null,
+  threshold: 0.1,
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
