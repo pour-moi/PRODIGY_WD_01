@@ -1,26 +1,92 @@
 body {
   background-color: whitesmoke;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "JetBrains";
+  src: url(./fonts/JetBrainsMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: "JetRegular";
+  src: url(./fonts/JetBrainsMonoNL-Regular.ttf);
 }
 
 .Header {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 4em;
+  background-color: rgb(221, 217, 217);
+  z-index: 1000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+p,
+li {
+  font-family: JetRegular;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
 }
 
 ul {
   display: flex;
   list-style: none;
-  gap: 1em;
+  gap: 1.4em;
 }
 .HeaderImage {
-  max-height: 30em;
+  max-height: 25em;
 }
 .About {
-  max-width: 100%;
+  max-width: 40%;
 }
+
+h1,
+h2 {
+  font-family: "JetBrains";
+}
+
+.us {
+  width: 50%;
+}
+
+.info {
+  width: 60%;
+}
+
+.fa-square-up-right {
+  font-size: 1.2em;
+}
+
+button {
+  width: 15em;
+  border-radius: 0.6em;
+  border-style: none;
+  background-color: #1f1f1f;
+  color: white;
+  font-family: JetBrains;
+  padding: 1em;
+}
+
 .aboutPage {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7em;
 }
 
 .service1,
@@ -38,7 +104,7 @@ ul {
 
 .highlight-text {
   background: #b5ff63;
-  padding: 0.2em;
+  padding: 0.1em;
 }
 
 .HightLightText {
@@ -50,10 +116,7 @@ ul {
   display: inline-block;
   background-color: #b5ff63;
 }
-.speed {
-  display: inline-block;
-  background-color: white;
-}
+
 .service2,
 .service3 {
   background-color: #1f1f1f;
@@ -77,14 +140,18 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1em;
+  gap: 2.5em;
 }
 
 .service1 > img,
 .service2 > img,
 .service3 > img,
 .service4 > img {
-  height: 10em;
+  height: 14em;
+}
+
+.serviceSection {
+  margin-top: 4em;
 }
 
 .service-info {
@@ -102,6 +169,7 @@ ul {
   display: flex;
   justify-content: space-evenly;
   margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 i {
@@ -111,13 +179,71 @@ i {
 .payment {
   margin-top: 7em;
   width: 59em;
-  /* max-width: 60em; */
   height: 15em;
   background-color: rgb(209, 207, 207);
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 2em;
+}
+.blogs {
+  width: 59em;
+  height: 12em;
+  background-color: #1f1f1f;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 2em;
+  padding: 1em;
+}
+
+.casestudy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.casestudies {
+  display: flex;
+  gap: 1em;
+}
+
+.blog1 {
+  width: 100%;
+  height: 10em;
+  font-size: 13px;
+}
+
+.Blog {
+  display: flex;
+}
+
+.casestudies > p {
+  font-size: 13px;
+}
+
+.case {
+  display: inline-block;
+  background-color: #b5ff63;
+}
+.caseHead {
+  display: flex;
+  align-items: center;
+  margin-right: 19em;
+  gap: 1em;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.blog1 > a {
+  color: #b5ff63;
+}
+
+footer {
+  background-color: grey;
+  margin: 0;
+  text-align: center;
 }
 
 .payment > img {
@@ -132,21 +258,16 @@ i {
   justify-content: center;
 }
 
-/* .middle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
 @media (max-width: 844px) {
   .HeaderImage {
-    max-height: 20em;
-    max-width: 17em;
+    display: none;
   }
   .aboutPage {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
   }
   .payment {
     margin-top: 1em;
@@ -160,14 +281,29 @@ i {
   .payment > img {
     height: 10em;
   }
-  .paymentText {
-    display: none;
+
+  .service1 > img,
+  .service2 > img,
+  .service3 > img,
+  .service4 > img {
+    height: 10em;
   }
+
+  .aboutPage {
+    align-items: start;
+    margin-left: 0;
+  }
+
+  .us {
+    width: 230%;
+    text-align: center;
+  }
+
   .info {
-    max-width: 17em;
+    width: 17em;
   }
   h1 {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
   .highlight-text {
     padding: 0.01em;
@@ -175,9 +311,6 @@ i {
 
   .HightLightText {
     padding: 0.01em;
-  }
-  .serviceInfo {
-    display: none;
   }
 
   .service-info {
@@ -190,7 +323,15 @@ i {
     height: 10em;
   }
 
-  .icons {
+  .services {
+    gap: 1em;
+  }
+
+  .casestudy,
+  .icons,
+  .serviceInfo,
+  .paymentText,
+  .Header {
     display: none;
   }
 }
