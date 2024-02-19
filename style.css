@@ -4,7 +4,7 @@ body {
 
 .Header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 ul {
@@ -16,7 +16,7 @@ ul {
   max-height: 30em;
 }
 .About {
-  width: 40%;
+  max-width: 100%;
 }
 .aboutPage {
   display: flex;
@@ -28,9 +28,10 @@ ul {
 .service3,
 .service4 {
   width: 29em;
-  height: 10em;
+  height: 13em;
   background-color: white;
   display: flex;
+  justify-content: space-around;
   border-radius: 2em;
   padding: 5px;
 }
@@ -58,6 +59,12 @@ ul {
   background-color: #1f1f1f;
 }
 
+.service1,
+.service4 {
+  border: 2px solid #1f1f1f;
+  box-shadow: 0 10px 5px 0 #1f1f1f;
+}
+
 .para {
   color: white;
 }
@@ -69,6 +76,7 @@ ul {
 .services {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1em;
 }
 
@@ -82,9 +90,93 @@ ul {
 .service-info {
   display: flex;
   align-items: center;
+  margin-left: 13em;
   gap: 1em;
 }
 
 .info {
   min-width: 12em;
+}
+
+.payment {
+  margin-top: 7em;
+  width: 59em;
+  /* max-width: 60em; */
+  height: 15em;
+  background-color: rgb(209, 207, 207);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 2em;
+}
+
+.payment > img {
+  height: 19em;
+}
+.paragraph {
+  max-width: 25em;
+}
+
+.paycontainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* .middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+@media (max-width: 844px) {
+  .HeaderImage {
+    max-height: 20em;
+    max-width: 17em;
+  }
+  .aboutPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .payment {
+    margin-top: 1em;
+    min-width: 15em;
+    max-width: 50em;
+    height: 10em;
+
+    align-items: center;
+    border-radius: 2em;
+  }
+  .payment > img {
+    height: 10em;
+  }
+  .paymentText {
+    display: none;
+  }
+  .info {
+    max-width: 17em;
+  }
+  h1 {
+    font-size: 1.4em;
+  }
+  .highlight-text {
+    padding: 0.01em;
+  }
+
+  .HightLightText {
+    padding: 0.01em;
+  }
+  .serviceInfo {
+    display: none;
+  }
+
+  .service-info {
+    margin-left: 0;
+  }
+  .service1,
+  .service2,
+  .service3,
+  .service4 {
+    height: 10em;
+  }
 }
