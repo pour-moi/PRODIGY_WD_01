@@ -98,6 +98,16 @@ ul {
   min-width: 12em;
 }
 
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2em;
+}
+
+i {
+  font-size: 4em;
+}
+
 .payment {
   margin-top: 7em;
   width: 59em;
@@ -178,5 +188,9 @@ ul {
   .service3,
   .service4 {
     height: 10em;
+  }
+
+  .icons {
+    display: none;
   }
 }
