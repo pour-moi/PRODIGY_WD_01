@@ -35,11 +35,14 @@ ul {
   padding: 5px;
 }
 
-.service1 > h2,
-.service4 > h2 {
-  display: inline-block;
-  height: fit-content;
-  background-color: #b5ff63;
+.highlight-text {
+  background: #b5ff63;
+  padding: 0.2em;
+}
+
+.HightLightText {
+  background: white;
+  padding: 0.2em;
 }
 
 .range {
@@ -80,4 +83,8 @@ ul {
   display: flex;
   align-items: center;
   gap: 1em;
+}
+
+.info {
+  min-width: 12em;
 }
