@@ -5,12 +5,12 @@ body {
 
 @font-face {
   font-family: "JetBrains";
-  src: url(./fonts/JetBrainsMono-Bold.ttf);
+  src: url(./fonts/SpaceGrotesk-Bold.ttf);
 }
 
 @font-face {
   font-family: "JetRegular";
-  src: url(./fonts/JetBrainsMonoNL-Regular.ttf);
+  src: url(./fonts/SpaceGrotesk-Regular.ttf);
 }
 
 .Header {
